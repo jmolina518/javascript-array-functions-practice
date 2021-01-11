@@ -55,24 +55,28 @@ const characters = [
 
 //***EVERY***
 //1. Does every character have blue eyes?
+const allBlueEyes = characters.every(
+  (character) => character.eye_color === 'blue'
+);
 //2. Does every character have mass more than 40?
+const allMassMoreThan40 = characters.every((character) => character.mass > 40);
 //3. Is every character shorter than 200?
+const allShorterThan200 = characters.every(
+  (character) => character.height < 200
+);
 //4. Is every character male?
+const allMale = characters.every((character) => character.gender === 'male');
 
 //***SOME***
 //1. Is there at least one male character?
 const oneMaleCharacter = characters.some(
   (character) => character.gender === 'male'
 );
-console.log(oneMaleCharacter);
 //2. Is there at least one character with blue eyes?
 const oneBlueEyes = characters.some(
   (character) => character.eye_color === 'blue'
 );
-console.log(oneBlueEyes);
 //3. Is there at least one character taller than 210?
 const oneTallerThan210 = characters.some((character) => character.height > 210);
-console.log(oneTallerThan210);
 //4. Is there at least one character that has mass less than 50?
 const oneMassLessThan50 = characters.some((character) => character.mass < 50);
-console.log(oneMassLessThan50);
